@@ -1,99 +1,54 @@
 $(function($) {
   var years = {
     '1986': {
-      '6': [
-        {
-          name: "Birth",
-        },
-      ]
+      '6': "Birth",
     },
     '1989': {
-      '6': [
-        {
-          name: "PC",
-          type: "Game",
-        },
-      ]
+      '6': "Start PC Games",
     },
     '1993': {
-      '1': [
-        {
-          name: "Primary School",
-        },
-      ]
+      '1': "Primary School",
     },
     '1995': {
-      '12': [
-        {
-          name: "SNES",
-          type: "Game",
-        },
-      ]
+      '12': "SNES GET",
     },
     '1999': {
-      '1': [
-        {
-          name: "High School",
-        },
-      ]
+      '1': "High School",
     },
     '2002': {
-      '6': [
-        {
-          name: "PS2",
-          type: "Game",
-        },
-      ]
+      '6': "PS2 GET",
     },
     '2004': {
-      '5': [
-        {
-          name: "University",
-        },
-      ]
+      '5': "University"
     },
     '2005': {
-      '12': [
-        {
-          name: "NDS",
-          type: "Game",
-        },
-      ]
+      '12': "NDS GET",
+    },
+    '2005': {
+      '3': "ねこだ!",
+    },
+    '2006': {
+      '3': "ねこが...",
+      '4': "...",
     },
     '2007': {
-      '8': [
-        {
-          name: "Wii",
-          type: "Game",
-        },
-      ]
+      '8': "Wii GET",
+    },
+    '2008': {
+      '6': "PS3 GET",
     },
     '2010': {
-      '7': [
-        {
-          name: "Graduation",
-        },
-      ],
-      '8': [
-        {
-          name: "Work",
-        },
-      ]
+      '7': "Graduation",
+      '8': "First Job",
     },
     '2012': {
-      '12': [
-        {
-          name: "WiiU",
-          type: "Game",
-        },
-      ]
+      '12': "WiiU GET",
+    },
+    '2013': {
+      '4': "3DS GET",
     },
     '2014': {
-      '5': [
-        {
-          name: "Pixiv",
-        },
-      ]
+      '5': "Pixiv",
     },
   };
   var y_prev = 0;
@@ -123,13 +78,13 @@ $(function($) {
     for(m = 1; m < 13; m++){
       m_tpl = Handlebars.compile($('#month-tpl').html())({
         m_num: m,
-        id: 'month-'+m,
+        id: 'year-'+ y_el.data('year')+ '-month-'+m,
       });
       m_el = $(m_tpl);
       m_el.appendTo(y_el);
     }
     for(m in years[y]){
-      y_el.find('.month[data-month='+m+']').removeClass('empty').html(years[y][m][0]['name']);
+      y_el.find('.month[data-month='+m+']').removeClass('empty').html(years[y][m]);
     }
 
     // done.
