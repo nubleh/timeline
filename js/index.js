@@ -7,7 +7,7 @@ $(function($) {
         },
       ]
     },
-    '1986': {
+    '1989': {
       '6': [
         {
           name: "PC",
@@ -73,6 +73,11 @@ $(function($) {
         {
           name: "Graduation",
         },
+      ],
+      '8': [
+        {
+          name: "Work",
+        },
       ]
     },
     '2012': {
@@ -114,6 +119,19 @@ $(function($) {
     y_el = $(y_tpl);
     y_el.appendTo($('#years'));
 
+    var m, m_tpl, m_el;
+    for(m = 1; m < 13; m++){
+      m_tpl = Handlebars.compile($('#month-tpl').html())({
+        m_num: m,
+        id: 'month-'+m,
+      });
+      m_el = $(m_tpl);
+      m_el.appendTo(y_el);
+    }
+    for(m in years[y]){
+      y_el.find('.month[data-month='+m+']').removeClass('empty').html(years[y][m][0]['name']);
+    }
+
     // done.
     y_prev = y_num;
   }
@@ -135,7 +153,9 @@ $(function($) {
       var i_bot = i_top + $(el).height();
       if(arrow >= i_top && arrow < i_bot){
         $(el).addClass('active');
-        year = $(el).data('year');
+        if($(el).hasClass('year')){
+          year = $(el).data('year');
+        }
       } else {
         $(el).removeClass('active');
       }

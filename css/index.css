@@ -3,7 +3,7 @@ body {
 }
 
 #arrow {
-  font-size: 10vh;
+  font-size: 6vw;
   line-height: 10vh;
   height: 10vh;
   width: 10vh;
@@ -25,7 +25,7 @@ body {
 #pillarmask {
   display: block;
   width: 100%;
-  height: 47.4vh;
+  height: 47vh;
   background: white;
   position: relative;
 }
@@ -39,8 +39,8 @@ body {
 
 #age {
   position: fixed;
-  top: 10vh;
-  left: 10vh;
+  top: 5vh;
+  left: 5vh;
   width: 20vh;
   height: 20vh;
   overflow: hidden;
@@ -57,9 +57,10 @@ body {
   font-size: 10vh;
   text-align: right;
   line-height: 20vh;
-  box-shadow: silver 0px -1px 5px;
+  box-shadow: silver 0px 1px 2px;
   -webkit-transform: scale(0.9);
   padding-right: 7vh;
+  border-radius: 3vh;
 }
 .age.active {
   height: 100%;
@@ -74,8 +75,28 @@ body {
 .year.empty {
 }
 .year.active {
-  background: #ccf;
+  background: #eef;
 }
 .year.empty.active {
-  background: #fcc;
+  background: #fee;
+}
+.month {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  color: silver;
+  font-size: 15px;
+}
+.month.empty {
+  height: 5px;
+}
+.month.active {
+  background: #ccf;
+  border-left: solid 5px black;
+  color: black;
+  padding-left: 5px;
+}
+.month.empty.active {
+  background: none;
+  border: none;
 }
