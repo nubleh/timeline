@@ -95,6 +95,9 @@ $(function($) {
 
   var pics = {
     'y1986m6': ['newgame.png'],
+    'y1989m6': ['3yo.jpg'],
+    'y1999m1': ['highschool.jpg'],
+    'y2004m5': ['uni.jpg'],
     'y2005m3': ['neko-1a.jpg','neko-1b.jpg','neko-1c.jpg'],
     'y2006m3': ['neko-2a.jpg','neko-2b.jpg'],
     'y2006m4': ['neko-3a.jpg','neko-3b.jpg','neko-3c.jpg','neko-3d.jpg','neko-3e.jpg'],
