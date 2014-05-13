@@ -114,3 +114,17 @@ body {
   background: none;
   border: none;
 }
+
+.pic {
+  position: fixed;
+  left: 13vh;
+  top: 30vh;
+  display: none;
+  width: 55vw;
+}
+.pic.active {
+  display: block;
+}
+.pic img {
+  width: 25vw;
+}

@@ -10,19 +10,19 @@ $(function($) {
       '1': "Primary School",
     },
     '1995': {
-      '12': "SNES GET",
+      '12': "SNES ゲット",
     },
     '1999': {
       '1': "High School",
     },
     '2002': {
-      '6': "PS2 GET",
+      '12': "PS2 ゲット",
     },
     '2004': {
       '5': "University"
     },
     '2005': {
-      '12': "NDS GET",
+      '12': "NDS ゲット",
     },
     '2005': {
       '3': "ねこだ!",
@@ -32,22 +32,24 @@ $(function($) {
       '4': "...",
     },
     '2007': {
-      '8': "Wii GET",
+      '4': "もっとねこ",
+      '8': "Wii ゲット",
     },
     '2008': {
-      '6': "PS3 GET",
+      '6': "PS3 ゲット",
     },
     '2010': {
       '7': "Graduation",
       '8': "First Job",
     },
     '2012': {
-      '12': "WiiU GET",
+      '12': "WiiU ゲット",
     },
     '2013': {
-      '4': "3DS GET",
+      '4': "3DS ゲット",
     },
     '2014': {
+      '2': "モンハン",
       '5': "Pixiv",
     },
   };
@@ -91,6 +93,21 @@ $(function($) {
     y_prev = y_num;
   }
 
+  var pics = {
+    'y1986m6': ['newgame.png'],
+    'y2005m3': ['neko-1a.jpg','neko-1b.jpg','neko-1c.jpg'],
+    'y2006m3': ['neko-2a.jpg','neko-2b.jpg'],
+    'y2006m4': ['neko-3a.jpg','neko-3b.jpg','neko-3c.jpg','neko-3d.jpg','neko-3e.jpg'],
+    'y2007m4': ['neko-4a.jpg','neko-4b.jpg'],
+    'y2010m8': ['firstjob.jpg'],
+    'y2013m4': ['3ds.jpg'],
+    'y2014m2': ['mh4.jpg'],
+    'y2014m5': ['pixiv.jpg'],
+  }
+  var pics_el = $(Handlebars.compile($('#pics-tpl').html())({pics: pics}));
+  pics_el.appendTo($(document.body));
+  console.log(pics_el[0]);
+
   for(var age = 0; age <= 28; age ++){
     var age_tpl = Handlebars.compile($('#age-tpl').html())({
       age: age,
@@ -110,6 +127,10 @@ $(function($) {
         $(el).addClass('active');
         if($(el).hasClass('year')){
           year = $(el).data('year');
+        } else {
+          var pic_id = '#y'+$(el).parents('.year').data('year')+'m'+$(el).data('month');
+          $('.pic').hide();
+          $(pic_id).show();
         }
       } else {
         $(el).removeClass('active');
@@ -148,7 +169,6 @@ $(function($) {
         duration: 600, 
         easing: 'swing',
         complete: function(){
-          console.log(arguments);
           pop.remove();
         },
       });

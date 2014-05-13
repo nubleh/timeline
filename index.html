@@ -23,5 +23,16 @@
   <script id="month-tpl" type="text/html">
     <div class="item month empty" id="{{id}}" data-month="{{m_num}}"></div>
   </script>
+  <script id="pics-tpl" type="text/html">
+    <div>
+    {{#each pics}}
+      <div id="{{@key}}" class="pic">
+      {{#each this}}
+        <a href="pics/{{this}}"><img src="pics/{{this}}"></a>
+      {{/each}}
+      </div>
+    {{/each}}
+    </div>
+  </script>
 </body>
 </html>
