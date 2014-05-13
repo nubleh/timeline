@@ -4,7 +4,7 @@ $(function($) {
       '6': "Birth",
     },
     '1989': {
-      '6': "Start PC Games",
+      '6': "PCでゲームをはじめる",
     },
     '1993': {
       '1': "Primary School",
@@ -49,6 +49,7 @@ $(function($) {
       '4': "3DS ゲット",
     },
     '2014': {
+      '1': "はじめてにほんにいく",
       '2': "モンハン",
       '5': "Pixiv",
     },
@@ -96,6 +97,7 @@ $(function($) {
   var pics = {
     'y1986m6': ['newgame.png'],
     'y1989m6': ['3yo.jpg'],
+    'y1993m1': ['primary.jpg'],
     'y1999m1': ['highschool.jpg'],
     'y2004m5': ['uni.jpg'],
     'y2005m3': ['neko-1a.jpg','neko-1b.jpg','neko-1c.jpg'],
@@ -103,7 +105,10 @@ $(function($) {
     'y2006m4': ['neko-3a.jpg','neko-3b.jpg','neko-3c.jpg','neko-3d.jpg','neko-3e.jpg'],
     'y2007m4': ['neko-4a.jpg','neko-4b.jpg'],
     'y2010m8': ['firstjob.jpg'],
+    'y2012m12': ['wiiu.jpg'],
     'y2013m4': ['3ds.jpg'],
+    'y2013m9': ['chiidon.jpg'],
+    'y2014m1': ['hajimete-1.jpg','hajimete-2.jpg','hajimete-3.jpg','hajimete-4.jpg','hajimete-5.jpg'],
     'y2014m2': ['mh4.jpg'],
     'y2014m5': ['pixiv.jpg'],
   }
