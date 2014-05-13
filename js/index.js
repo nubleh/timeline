@@ -109,7 +109,6 @@ $(function($) {
   }
   var pics_el = $(Handlebars.compile($('#pics-tpl').html())({pics: pics}));
   pics_el.appendTo($(document.body));
-  console.log(pics_el[0]);
 
   for(var age = 0; age <= 28; age ++){
     var age_tpl = Handlebars.compile($('#age-tpl').html())({
@@ -147,7 +146,7 @@ $(function($) {
     updateArrow();
   });
 
-  var t = setInterval(function(){
+  window.t = setInterval(function(){
     var pop = $('<div id="pop"></div>');
     var min_top = $('.year[data-year=1993]').offset().top;
     var max_top;

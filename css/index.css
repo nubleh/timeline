@@ -35,6 +35,8 @@ body {
   height: 45vh;
   background: none;
   position: relative;
+  background: url('../pics/sumikko.png') no-repeat left bottom;
+  opacity: 0.5;
 }
 
 #age {
@@ -129,4 +131,9 @@ body {
 }
 .pic img {
   width: 25vw;
+  border: solid 1px silver;
+  padding: 2px;
+}
+.pic img:hover {
+  border-color: black;
 }
