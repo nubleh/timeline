@@ -1,0 +1,81 @@
+body {
+  font-size: 20px;
+}
+
+#arrow {
+  font-size: 10vh;
+  line-height: 10vh;
+  height: 10vh;
+  width: 10vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -7.6vh;
+}
+
+#timepillar {
+  position: fixed;
+  top: 0;
+  left: 57%;
+  height: 100%;
+  width: 1vh;
+  background: black;
+}
+
+#pillarmask {
+  display: block;
+  width: 100%;
+  height: 47.4vh;
+  background: white;
+  position: relative;
+}
+#bottommask {
+  display: block;
+  width: 100%;
+  height: 50vh;
+  background: white;
+  position: relative;
+}
+
+#age {
+  position: fixed;
+  top: 10vh;
+  left: 10vh;
+  width: 20vh;
+  height: 20vh;
+  overflow: hidden;
+}
+#age span {
+  position: absolute;
+  top: 8vh;
+  left: 13vh;
+  font-size: 4vh;
+}
+.age {
+  overflow: hidden;
+  height: 0%;
+  font-size: 10vh;
+  text-align: right;
+  line-height: 20vh;
+  box-shadow: silver 0px -1px 5px;
+  -webkit-transform: scale(0.9);
+  padding-right: 7vh;
+}
+.age.active {
+  height: 100%;
+}
+
+.item {
+}
+.year {
+  margin-left: 57%;
+  padding-left: 10px;
+}
+.year.empty {
+}
+.year.active {
+  background: #ccf;
+}
+.year.empty.active {
+  background: #fcc;
+}
