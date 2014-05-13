@@ -130,7 +130,7 @@ body {
   display: block;
 }
 .pic img {
-  width: 25vw;
+  width: 50vw;
   border: solid 1px silver;
   padding: 2px;
 }
