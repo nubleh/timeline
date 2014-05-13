@@ -122,5 +122,37 @@ $(function($) {
   $(window).on('scroll', function(e){
     updateArrow();
   });
+
+  var t = setInterval(function(){
+    var pop = $('<div id="pop"></div>');
+    var min_top = $('.year[data-year=1993]').offset().top;
+    var max_top;
+    var roll = Math.random();
+    if(roll<0.8){
+      pop.html('ゲーム！');
+      max_top = $('.year[data-year=2014]').offset().top;
+    } else if(roll<0.9){
+      pop.html('勉強。。。');
+      max_top = $('.year[data-year=2009]').offset().top;
+    } else {
+      pop.html('仕事。。。');
+      min_top = $('.year[data-year=2010]').offset().top;
+      max_top = $('.year[data-year=2014]').offset().top;
+    }
+    var top = min_top + Math.random()*(max_top-min_top);
+    pop.appendTo(document.body)
+      .css('opacity', 1)
+      .css('left', '80%')
+      .css('top', top)
+      .animate({left:'85%',opacity:'0'},{
+        duration: 600, 
+        easing: 'swing',
+        complete: function(){
+          console.log(arguments);
+          pop.remove();
+        },
+      });
+  }, 400)
 });
+
 
