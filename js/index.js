@@ -1,25 +1,25 @@
 $(function($) {
   var years = {
     '1986': {
-      '6': "Birth",
+      '6': "うまれた",
     },
     '1989': {
       '6': "PCでゲームをはじめる",
     },
     '1993': {
-      '1': "Primary School",
+      '1': "しょうがっこう",
     },
     '1995': {
       '12': "SNES ゲット",
     },
     '1999': {
-      '1': "High School",
+      '1': "こうこう",
     },
     '2002': {
       '12': "PS2 ゲット",
     },
     '2004': {
-      '5': "University"
+      '5': "だいがく"
     },
     '2005': {
       '12': "NDS ゲット",
@@ -39,8 +39,8 @@ $(function($) {
       '6': "PS3 ゲット",
     },
     '2010': {
-      '7': "Graduation",
-      '8': "First Job",
+      '7': "そつぎょう",
+      '8': "さいしょのしごと",
     },
     '2012': {
       '12': "WiiU ゲット",
@@ -100,7 +100,7 @@ $(function($) {
     'y1993m1': ['primary.jpg'],
     'y1999m1': ['highschool.jpg'],
     'y2004m5': ['uni.jpg'],
-    'y2005m3': ['neko-1a.jpg','neko-1b.jpg','neko-1c.jpg'],
+    'y2005m3': ['neko-1a.jpg','neko-1b.jpg','neko-1c.jpg','neko-1d.jpg'],
     'y2006m3': ['neko-2a.jpg','neko-2b.jpg'],
     'y2006m4': ['neko-3a.jpg','neko-3b.jpg','neko-3c.jpg','neko-3d.jpg','neko-3e.jpg'],
     'y2007m4': ['neko-4a.jpg','neko-4b.jpg'],
